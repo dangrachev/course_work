@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f3f4f6;
+  color: #2d2d2d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.topbar {
+  background: linear-gradient(90deg, #4b2a63, #5a2d6f);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 60px;
+}
+
+.topbar-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.topbar-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.topbar-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+header {
+  background: #ffffff;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+}
+
+.logo span {
+  color: #6b2d84;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-weight: 500;
+}
+
+.about-us__link {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-arrow {
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.dropdown-menu-categorie {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #2d2d2d;
+  font-size: 14px;
+}
+
+.dropdown-menu-categorie:hover {
+  background-color: #6b2d84;
+  color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.btn-login {
+  background: #6b2d84;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
