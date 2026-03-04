@@ -21,7 +21,7 @@ body {
 }
 
 .topbar {
-  background: linear-gradient(90deg, #4b2a63, #5a2d6f);
+  background: linear-gradient(90deg, #8248ac, #472567);
   height: 50px;
   display: flex;
   align-items: center;
@@ -41,6 +41,12 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.topbar-icon:hover {
+  opacity: 1;
 }
 
 .topbar-icon img {
@@ -135,4 +141,97 @@ nav {
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.footer {
+  background: linear-gradient(0deg, #4f2d67, #472567);
+  /* background-color: #3f2756; */
+  color: #ffffff;
+  padding: 40px 60px 20px;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-subscribe-form {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer__input-email {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 0;
+  width: 250px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer__input-email::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__input-email:focus {
+  outline: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+.btn-subsribe {
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 8px 16px;
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn-subsribe:hover {
+  background: #ffffff;
+  color: #5b2c6f;
+}
+.btn-subsribe:active {
+  transform: scale(0.95);
+}
+
+.footer-contacts {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-contact:hover {
+  opacity: 1;
+}
+
+.footer-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.8;
 }
