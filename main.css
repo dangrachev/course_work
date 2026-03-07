@@ -30,13 +30,14 @@ body {
 .container {
   max-width: 1400px;
   margin: 40px auto;
+  padding: 0 20px;
 }
 
 .cards-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 40px;
-  padding: 0 40px;
+  padding: 0 clamp(16px, 3vw, 40px);
 }
 
 /* ШАПКА */
@@ -53,7 +54,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 60px;
+  padding: 0 clamp(16px, 4vw, 60px);
 }
 
 .social-networks {
@@ -89,7 +90,7 @@ body {
 
 header {
   background: #ffffff;
-  padding: 20px 60px;
+  padding: 20px clamp(16px, 4vw, 60px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -193,7 +194,7 @@ nav {
 /* КАРТОЧКИ */
 .cards {
   display: grid;
-  grid-template-columns: repeat(6, 160px);
+  grid-template-columns: repeat(6, 1fr);
   gap: 30px;
 }
 
@@ -375,7 +376,7 @@ nav {
 
 /* САЙДБАР */
 .sidebar {
-  width: 320px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -629,4 +630,189 @@ nav {
   margin-top: 30px;
   font-size: 13px;
   opacity: 0.8;
+}
+
+/* Планшет — до 1280px */
+@media (max-width: 1280px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+}
+
+/* Планшет — до 1024px */
+@media (max-width: 1024px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .sidebar {
+    order: -1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .sidebar-search-block {
+    grid-column: 1 / -1;
+    order: -1;
+    padding: 0;
+  }
+
+  .sidebar-video-card {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .card,
+  .card:nth-child(1),
+  .card:nth-child(2),
+  .card:nth-child(6),
+  .card:nth-child(7) {
+    grid-column: span 1;
+  }
+
+  .card img,
+  .card:nth-child(1) img,
+  .card:nth-child(2) img,
+  .card:nth-child(6) img,
+  .card:nth-child(7) img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 15px;
+  }
+
+  .pagination {
+    grid-column: 1 / -1;
+  }
+
+  .footer {
+    padding: 32px 24px 16px;
+  }
+
+  .footer-content {
+    gap: 24px;
+  }
+}
+
+/* Мобильный — до 640px */
+@media (max-width: 640px) {
+  .topbar {
+    padding: 0 16px;
+    justify-content: center;
+  }
+
+  header {
+    padding: 14px 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .btn-login {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .cards-container {
+    padding: 0 12px;
+    margin: 24px auto;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .card-link {
+    opacity: 1;
+  }
+
+  .sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-video-card {
+    grid-column: auto;
+  }
+
+  .footer {
+    padding: 28px 16px 16px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-subscribe-form {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .footer__input-email {
+    width: 100%;
+  }
+
+  .footer-contacts {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo {
+    margin: 0 auto;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .btn-login {
+    margin-left: auto;
+  }
 }

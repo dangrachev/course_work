@@ -1,3 +1,4 @@
+/* БАННЕР */
 .hero-banner {
   position: relative;
   width: 100%;
@@ -34,10 +35,10 @@
   position: relative;
   z-index: 2;
   color: #fff;
+  padding: 0 20px;
 }
 
 .hero-banner__title {
-  font-family: "Playfair Display", serif;
   font-size: 38px;
   font-weight: 700;
   margin-bottom: 12px;
@@ -51,6 +52,7 @@
   max-width: 460px;
 }
 
+/* ТЕКСТ О НАС */
 .page-content {
   padding: 50px 80px;
   max-width: 1000px;
@@ -97,7 +99,6 @@
 }
 
 .about-card__title {
-  font-family: "Playfair Display", serif;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 14px;
@@ -138,25 +139,24 @@
   margin-bottom: 50px;
 }
 
+/* КАРТОЧКИ */
 .contacts-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 250px);
+  justify-content: center;
   gap: 24px;
   margin-bottom: 60px;
   width: 100%;
-  padding: 0 120px;
+  padding: 0 clamp(16px, 4vw, 40px);
 }
 
 .contact-card {
-  width: 300px;
-  height: 250px;
   padding: 32px 24px 28px;
-
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   background: #fff;
   border-radius: 10px;
   text-align: center;
@@ -204,32 +204,27 @@
   text-decoration: none;
 }
 
+/* ФОРМА */
 .form-section {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto 60px;
-  padding: 0px 40px;
+  padding: 0 clamp(16px, 3vw, 40px);
   display: grid;
-  grid-template-columns: 630px 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 0;
   border-radius: 6px;
   overflow: hidden;
 }
 
 .form-section__image {
-  position: relative;
   overflow: hidden;
-  height: 700px;
 }
 
-.form-section__image-inner {
-  position: absolute;
-  inset: 0;
-}
-
-.form-section__image-inner img {
+.form-section__image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center top;
   display: block;
@@ -240,7 +235,6 @@
 }
 
 .form-section__title {
-  font-family: "Playfair Display", serif;
   font-size: 26px;
   font-weight: 700;
   color: var(--text-color-dark);
@@ -311,4 +305,106 @@
 }
 .btn-submit:active {
   transform: scale(0.97);
+}
+
+@media (max-width: 860px) {
+  .contacts-section {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: stretch;
+    padding: 0 clamp(16px, 3vw, 24px);
+  }
+}
+
+/* Планшет — до 1024px */
+@media (max-width: 1024px) {
+  .hero-banner {
+    height: 380px;
+  }
+
+  .hero-banner__title {
+    font-size: 30px;
+  }
+
+  .page-content {
+    padding: 36px 32px;
+  }
+
+  .about-card {
+    float: none;
+    width: 100%;
+    max-width: 370px;
+    margin: 0 auto 24px;
+  }
+
+  .form-section {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .form-section__image {
+    display: none;
+  }
+
+  .form-section__body {
+    padding: 32px 24px;
+  }
+}
+
+/* Мобильный — до 640px */
+@media (max-width: 640px) {
+  .hero-banner {
+    height: 240px;
+  }
+
+  .hero-banner__title {
+    font-size: 24px;
+  }
+
+  .hero-banner__subtitle {
+    font-size: 13px;
+  }
+
+  .page-content {
+    padding: 24px 16px;
+  }
+
+  .about-card {
+    padding: 20px 18px;
+  }
+
+  .about-card__title {
+    font-size: 17px;
+  }
+
+  .contacts-section {
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    padding: 0 16px;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .form-section {
+    padding: 0 16px;
+    margin-bottom: 36px;
+  }
+
+  .form-section__body {
+    padding: 24px 16px;
+  }
+
+  .form-section__title {
+    font-size: 20px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
 }
