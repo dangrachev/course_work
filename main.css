@@ -30,6 +30,9 @@ body {
 .container {
   max-width: 1400px;
   margin: 40px auto;
+}
+
+.cards-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 40px;
@@ -53,12 +56,12 @@ body {
   padding: 0 60px;
 }
 
-.topbar-icons {
+.social-networks {
   display: flex;
   gap: 20px;
 }
 
-.topbar-icon {
+.social-media {
   width: 18px;
   height: 18px;
   display: flex;
@@ -69,11 +72,16 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.topbar-icon:hover {
+.social-media:hover {
   opacity: 1;
 }
 
-.topbar-icon img {
+.social-media-link {
+  width: 100%;
+  height: 100%;
+}
+
+.social-media img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -113,6 +121,10 @@ nav {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
+}
+
+.about-us__link:hover {
+  color: var(--text-color-dark-purple);
 }
 
 .dropdown {
@@ -574,7 +586,7 @@ nav {
   color: #ffffff;
   font-size: 12px;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-subsribe:hover {
