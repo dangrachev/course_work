@@ -46,7 +46,7 @@
 }
 
 .hero-banner__subtitle {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
   opacity: 0.85;
   max-width: 460px;
@@ -65,7 +65,7 @@
 }
 
 .about-intro__text {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.8;
   color: var(--text-color-grey);
   margin-bottom: 16px;
@@ -82,7 +82,7 @@
 }
 
 .about__text {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.8;
   color: var(--text-color-grey);
   margin-bottom: 14px;
@@ -106,7 +106,7 @@
 }
 
 .about-card__body {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.75;
   opacity: 0.92;
   margin-bottom: 24px;
@@ -120,7 +120,7 @@
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 4px;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   cursor: pointer;
   background: transparent;
@@ -133,7 +133,7 @@
 }
 
 .about-bottom {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.8;
   color: var(--text-color-grey);
   margin-bottom: 50px;
@@ -177,7 +177,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 16px;
+  margin: 0 auto 8px;
 }
 
 .contact-card__icon img {
