@@ -47,6 +47,7 @@ body {
 
 /* ШАПКА */
 .header-wrapper {
+  padding-top: env(safe-area-inset-top);
   position: fixed;
   top: 0;
   left: 0;
