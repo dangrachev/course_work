@@ -23,6 +23,7 @@
 body {
   min-height: 100vh;
   min-height: 100dvh;
+  padding-top: 130px;
 
   display: flex;
   flex-direction: column;
@@ -46,9 +47,9 @@ body {
 
 /* ШАПКА */
 .header-wrapper {
-  position: sticky;
+  position: fixed;
   top: 0;
-  inset-inline: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
 }
@@ -759,7 +760,7 @@ nav {
 
   .cards-container {
     padding: 0 12px;
-    margin: 24px auto;
+    margin: 50px auto 24px;
   }
 
   .cards {
