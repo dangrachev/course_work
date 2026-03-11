@@ -22,7 +22,6 @@
 
 body {
   min-height: 100vh;
-  min-height: 100dvh;
   padding-top: 130px;
 
   display: flex;
@@ -30,11 +29,11 @@ body {
 
   font-family: "Roboto", sans-serif;
   background: var(--main-bg);
-  color: #2d2d2d;
+  color: var(--text-color-dark);
 }
 
 .container {
-  max-width: 90%;
+  max-width: 1400px;
   margin: 40px auto;
 }
 
@@ -42,7 +41,7 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 40px;
-  padding: 0 clamp(16px, 3vw, 20px);
+  padding: 0 20px;
 }
 
 /* ШАПКА */
@@ -61,7 +60,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 clamp(16px, 4vw, 60px);
+  padding: 0 60px;
   filter: saturate(150%);
 }
 
@@ -98,7 +97,7 @@ body {
 
 header {
   background: #ffffff;
-  padding: 20px clamp(16px, 4vw, 60px);
+  padding: 20px 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
