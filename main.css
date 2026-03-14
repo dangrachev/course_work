@@ -215,7 +215,7 @@ nav {
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
-  animation: fadeInUp 2s ease both;
+  animation: fadeInUp 2s ease forwards;
   transition: all 0.4s ease;
 }
 
@@ -283,12 +283,12 @@ nav {
 
 .card p {
   font-size: 18px;
-  color: #666;
+  color: var(--text-color-grey);
 }
 
 .date {
   font-size: 16px;
-  color: #999;
+  color: var(--text-color-dark);
   margin-top: auto;
   padding-top: 10px;
 }
@@ -460,7 +460,7 @@ nav {
   gap: 10px;
   margin-bottom: 15px;
   align-items: center;
-  animation: fadeInUp 1.2s ease both;
+  animation: fadeInUp 2s ease both;
 }
 
 .popular-item:nth-child(1) {
@@ -663,11 +663,9 @@ nav {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 

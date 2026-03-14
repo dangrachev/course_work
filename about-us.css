@@ -202,6 +202,10 @@
 .contact-card__link {
   color: var(--text-color-grey);
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact-card__link:hover {
+  color: #5b2c6f
 }
 
 /* ФОРМА */
