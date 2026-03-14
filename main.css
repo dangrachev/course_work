@@ -535,35 +535,12 @@ nav {
   gap: 6px;
 }
 
-.video-card-image {
-  position: relative;
-  z-index: 1;
-}
-
-.video-card-image:hover img {
-  transform: scale(1.05);
-}
-
-.video-card-image img {
+.sidebar-video-card video {
   width: 100%;
+  height: 365px;
   display: block;
-  transition: transform 0.4s ease;
-}
-
-.video-play {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-}
-
-.video-play img {
-  width: 50px;
-  height: 50px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 /* ПОДВАЛ */
